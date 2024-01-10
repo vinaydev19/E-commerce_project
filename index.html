@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/f8178aea98.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>E-Commerce</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <div class="nav">
+            <div class="nav-logo">
+              <a href="index.html"><h1>E-Commerce</h1></a>
+            </div>
+            <div class="nav-list-mid">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Page/productPage.html">Menu</a></li>
+                <li><a href="#contactUsSection">Contact Us</a></li>
+              </ul>
+            </div>
+            <div class="nav-list-right">
+              <ul>
+                <li>
+                  <a href="#" id="openAddtoCart"
+                    ><i class="fa-solid fa-cart-shopping"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="/Page/login.html"
+                    ><i class="fa-solid fa-user"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+            <!-- <div id="navMobile"> -->
+            <div class="MenuBarOpen">
+              <i class="fa-solid fa-bars" id="OpenBtn"></i>
+            </div>
+            <div class="MobileLift">
+              <a href="#" id="MobileopenAddtoCart"
+                ><i class="fa-solid fa-cart-shopping"></i
+              ></a>
+            </div>
+            <!-- </div> -->
+          </div>
+        </nav>
+        <div class="AddtoCart" id="AddtoCart">
+          <div class="AddtoCartHead">
+            <h1>Shopping Cart</h1>
+            <div id="OpenCloesAddtocart">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+          </div>
+          <div class="addtocartlistpra"></div>
+          <div id="AddtoCartList"></div>
+          <button>Proceed to Buy <span id="numOfProduct"></span></button>
+        </div>
+        <div class="MobileNav-list" id="Mobilebar">
+          <ul>
+            <li>
+              <a href=""><i class="fa-solid fa-xmark"></i></a>
+            </li>
+            <li><a href="index.html" onclick="OpenCloes()">Home</a></li>
+            <li>
+              <a href="Page/productPage.html" onclick="OpenCloes()">Menu</a>
+            </li>
+            <li>
+              <a href="index.html#contactUsSection" onclick="OpenCloes()"
+                >Contact Us</a
+              >
+            </li>
+            <li>
+              <a href="" onclick="OpenCloes()"
+                ><i class="fa-solid fa-cart-shopping"></i
+              ></a>
+            </li>
+            <li>
+              <a href="/Page/login.html" onclick="OpenCloes()"
+                ><i class="fa-solid fa-user"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <main>
+        <section class="section1">
+          <div class="img-sliding">
+            <img
+              src="file/banner/banner-1.jpg"
+              id="image1"
+              class="active images"
+            />
+            <!-- <img src="file/banner/banner-2.jpg" id="image2" /> -->
+            <!-- <img src="file/banner/banner-3.jpg" id="image3" /> -->
+
+            <!-- <button id="prev" onclick="perv()">&lt</button>
+            <button id="next" onclick="next()">&gt</button> -->
+          </div>
+        </section>
+        <section class="section2">
+          <h2 id="Menu">Our Product</h2>
+          <div class="product-list" id="product-list"></div>
+          <button class="btn">
+            <a href="Page/productPage.html">See More</a>
+          </button>
+        </section>
+        <hr />
+        <section id="contactUsSection">
+          <div class="contactUs">
+            <form
+              action="https://api.web3forms.com/submit"
+              method="POST"
+              class="contactUsFrom"
+            >
+            <input type="hidden" name="access_key" value="78b55c92-5782-4383-80b0-3cce474aabc5">
+              <input
+                type="text"
+                name="Yourname"
+                id="YourName"
+                placeholder="Name*"
+              />
+              <input
+                type="text"
+                name="phoneNumber"
+                id="phoneNumber"
+                maxlength="10"
+                placeholder="Phone Number*"
+              />
+              <input
+                type="email"
+                name="YourEmail"
+                id="YourEmail"
+                placeholder="Email*"
+              />
+              <textarea
+                name="massage"
+                id="massage"
+                cols="30"
+                rows="5"
+                placeholder="massage"
+              ></textarea>
+              <input type="submit" id="submitBtn" value="Send" />
+            </form>
+            <div class="contactinfo">
+              <div class="info">
+                <div class="info-map">
+                  <i class="fa-solid fa-map-location-dot"></i>
+                  <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+                <div class="info-email">
+                  <i class="fa-solid fa-envelope"></i>
+                  <p>home@funsome.in</p>
+                </div>
+                <div class="info-mobile">
+                  <i class="fa-solid fa-phone-volume"></i>
+                  <p>+91 134567895</p>
+                </div>
+              </div>
+              <div class="social-media-link">
+                <a href="https://www.instagram.com" target="_blank"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+                <a href="https://www.fb.com" target="_blank"
+                  ><i class="fa-brands fa-facebook"></i
+                ></a>
+                <a href="https://www.x.com" target="_blank"
+                  ><i class="fa-brands fa-x-twitter"></i
+                ></a>
+                <a href="https://www.youtube.com" target="_blank"
+                  ><i class="fa-brands fa-youtube"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <hr />
+      <footer>
+        <p>&#169; this site by Vinay kumar</p>
+      </footer>
+    </div>
+  </body>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="script.js"></script>
+</html>

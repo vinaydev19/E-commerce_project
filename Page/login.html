@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - E-Commerce</title>
+    <script
+      src="https://kit.fontawesome.com/f8178aea98.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    .container{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .box{
+        width: 50%;
+        height: 80%;
+        background-color: #2e2f33;
+        color: #fff;
+        display: flex;
+        /* justify-content: center; */
+        align-items: center;
+        flex-direction: column;
+    }
+    .box h1{
+        margin:50px 30px 0;
+    }
+    .box .signInOut{
+        margin: 30px 10px;
+    }
+    .signInOut a{
+        text-decoration: none;
+        color: #fff;
+        margin: 0px 20px;
+        transition: border-bottom 0.1s linear;
+    }
+    .signInOut a:focus{
+        border-bottom: 3px solid #2ebd59;
+    }
+    .box form{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .box form input[type=text], [type=password]{
+        width: 50%;
+        height: 50px;
+        margin: 10px;
+        border-radius: 20px;
+        text-align: center;
+        font-size: 18px;
+        border: none;
+        outline: none;
+    }
+    .box form .checkbox{
+        width: 100%;
+        margin: 20px 10px;
+        position: relative;
+        left: 30%;
+        font-size: 18px;
+    }
+    .box form .checkbox input[type=checkbox]{
+        width: 30px;
+        height: 20px;
+        cursor: pointer;
+    }
+    .box form input[type=submit]{
+        width: 40%;
+        height: 50px;
+        margin: 10px;
+        font-size: 18px;
+        border-radius: 20px;
+        background-color: #2ebd59;
+        cursor: pointer;
+        box-shadow: 3px 5px 10px black;
+    }
+    .box form button{
+        width: 40%;
+        height: 50px;
+        margin: 10px;
+        font-size: 18px;
+        background-color: #2e2f33;
+
+        border: none;
+        outline: none;
+    }
+    .box form button a{
+        color: #fff;
+        text-decoration: none;
+    }
+
+    @media (max-width:1000px) {
+      .box form input[type=text], [type=password]{
+        width: 80%;
+        height: 50px;
+    }
+    .box form input[type=submit]{
+        width: 60%;
+        height: 50px;
+    }
+    .box form button{
+        width: 70%;
+        height: 50px;
+    }
+    }
+    @media (max-width:650px) {
+      .box{
+        width: 90%;
+        height: 80%;
+      }
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="box">
+        <h1>E-Commerce</h1>
+        <div class="signInOut">
+          <a href="#">SING IN</a>
+          <a href="/Page/singup.html">SING UP</a>
+        </div>
+        <form>
+          <input type="text" id="username" placeholder="Username" />
+          <input type="password" id="password" placeholder="password" />
+          <div class="checkbox">
+
+              <input type="checkbox" id="stayLogin"  /><labe> stay signed in</label>
+          </div>
+            <input type="submit" value="SIGN IN">
+            <button><a href="">Forgot Password ?</a></button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
