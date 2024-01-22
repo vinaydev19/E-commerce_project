@@ -8,124 +8,87 @@
       src="https://kit.fontawesome.com/f8178aea98.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="login.css" />
   </head>
-  <style>
-    *{
-        margin: 0px;
-        padding: 0px;
-        box-sizing: border-box;
-    }
-    .container{
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
 
-    }
-    .box{
-        width: 50%;
-        height: 80%;
-        background-color: #2e2f33;
-        color: #fff;
-        display: flex;
-        /* justify-content: center; */
-        align-items: center;
-        flex-direction: column;
-    }
-    .box h1{
-        margin:50px 30px 0;
-    }
-    .box .signInOut{
-        margin: 30px 10px;
-    }
-    .signInOut a{
-        text-decoration: none;
-        color: #fff;
-        margin: 0px 20px;
-        transition: border-bottom 0.1s linear;
-    }
-    .signInOut a:focus{
-        border-bottom: 3px solid #2ebd59;
-    }
-    .box form{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-    .box form input[type=text], [type=password]{
-        width: 50%;
-        height: 50px;
-        margin: 10px;
-        border-radius: 20px;
-        text-align: center;
-        font-size: 18px;
-        border: none;
-        outline: none;
-    }
-    .box form .checkbox{
-        width: 100%;
-        margin: 20px 10px;
-        position: relative;
-        left: 30%;
-        font-size: 18px;
-    }
-    .box form .checkbox input[type=checkbox]{
-        width: 30px;
-        height: 20px;
-        cursor: pointer;
-    }
-    .box form input[type=submit]{
-        width: 40%;
-        height: 50px;
-        margin: 10px;
-        font-size: 18px;
-        border-radius: 20px;
-        background-color: #2ebd59;
-        cursor: pointer;
-        box-shadow: 3px 5px 10px black;
-    }
-    .box form button{
-        width: 40%;
-        height: 50px;
-        margin: 10px;
-        font-size: 18px;
-        background-color: #2e2f33;
-
-        border: none;
-        outline: none;
-    }
-    .box form button a{
-        color: #fff;
-        text-decoration: none;
-    }
-
-    @media (max-width:1000px) {
-      .box form input[type=text], [type=password]{
-        width: 80%;
-        height: 50px;
-    }
-    .box form input[type=submit]{
-        width: 60%;
-        height: 50px;
-    }
-    .box form button{
-        width: 70%;
-        height: 50px;
-    }
-    }
-    @media (max-width:650px) {
-      .box{
-        width: 90%;
-        height: 80%;
-      }
-    }
-  </style>
   <body>
+    <header>
+      <nav>
+        <div class="nav">
+          <div class="nav-logo">
+            <a href="index.html"><h1>E-Commerce</h1></a>
+          </div>
+          <div class="nav-list-mid">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="Page/productPage.html">Menu</a></li>
+              <li><a href="#contactUsSection">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="nav-list-right">
+            <ul>
+              <li>
+                <a href="#" id="openAddtoCart"
+                  ><i class="fa-solid fa-cart-shopping"></i
+                ></a>
+              </li>
+              <li>
+                <a href="/Page/login.html"
+                  ><i class="fa-solid fa-user"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <!-- <div id="navMobile"> -->
+          <div class="MenuBarOpen">
+            <i class="fa-solid fa-bars" id="OpenBtn"></i>
+          </div>
+          <div class="MobileLift">
+            <a href="#" id="MobileopenAddtoCart"
+              ><i class="fa-solid fa-cart-shopping"></i
+            ></a>
+          </div>
+          <!-- </div> -->
+        </div>
+      </nav>
+      <div class="AddtoCart" id="AddtoCart">
+        <div class="AddtoCartHead">
+          <h1>Shopping Cart</h1>
+          <div id="OpenCloesAddtocart">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+        <div class="addtocartlistpra"></div>
+        <div id="AddtoCartList"></div>
+        <button>Proceed to Buy <span id="numOfProduct"></span></button>
+      </div>
+      <div class="MobileNav-list" id="Mobilebar">
+        <ul>
+          <li>
+            <a href=""><i class="fa-solid fa-xmark"></i></a>
+          </li>
+          <li><a href="index.html" onclick="OpenCloes()">Home</a></li>
+          <li>
+            <a href="Page/productPage.html" onclick="OpenCloes()">Menu</a>
+          </li>
+          <li>
+            <a href="index.html#contactUsSection" onclick="OpenCloes()"
+              >Contact Us</a
+            >
+          </li>
+          <li>
+            <a href="" onclick="OpenCloes()"
+              ><i class="fa-solid fa-cart-shopping"></i
+            ></a>
+          </li>
+          <li>
+            <a href="/Page/login.html" onclick="OpenCloes()"
+              ><i class="fa-solid fa-user"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </header>
     <div class="container">
       <div class="box">
         <h1>E-Commerce</h1>
@@ -134,16 +97,25 @@
           <a href="/Page/singup.html">SING UP</a>
         </div>
         <form>
-          <input type="text" id="username" placeholder="Username" />
-          <input type="password" id="password" placeholder="password" />
+          <div class="inputbox">
+            <input type="text" id="username" placeholder="Username" onkeyup="ValidationUsername()" />
+            <span id="username_error"></span>
+          </div>
+          <div class="inputbox">
+            <input type="password" id="password" placeholder="password" onkeyup="ValidationPassword()" />
+            <span id="password_error"></span>
+          </div>
           <div class="checkbox">
-
               <input type="checkbox" id="stayLogin"  /><labe> stay signed in</label>
           </div>
-            <input type="submit" value="SIGN IN">
+          <div class="checkbox">
+            <input id="submit" type="submit" value="SIGN IN">
+          </div>
             <button><a href="">Forgot Password ?</a></button>
         </form>
       </div>
     </div>
   </body>
+  <script src="login.js"></script>
+
 </html>
